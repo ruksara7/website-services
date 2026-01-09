@@ -1,255 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruksar Ansari - Website & Landing Pages Services</title>
+    <meta name="description" content="Simple, structured websites for cafés, salons, tutors, and small businesses. Clear pricing, real demos, optional pre-booking clarification.">
 
-  <title>Websites & Landing Pages | Ruksar Ansari</title>
+    <style>
+        :root {
+            --primary: #d4af37;
+            --secondary: #208091;
+            --dark: #1a365d;
+            --text: #2c3e50;
+            --gray: #607d8b;
+            --light: #f7f8fa;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
 
-  <meta name="description" content="Simple, structured websites for cafés, salons, tutors, and small businesses. Clear pricing, real demos, optional pre-booking clarification.">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <style>
-    * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
 
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background: #f7f8fa;
-      color: #2c3e50;
-      line-height: 1.7;
-    }
+        /* HEADER */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-      text-align: center;
-    }
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-    h1 {
-      font-size: 2.6em;
-      font-weight: normal;
-      margin-bottom: 15px;
-    }
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
 
-    h2 {
-      font-size: 2em;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
+        .logo span {
+            color: var(--primary);
+        }
 
-    p {
-      max-width: 850px;
-      margin: 0 auto 30px;
-      font-size: 1.05em;
-      color: #455a64;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
 
-    section {
-      margin-bottom: 100px;
-    }
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 14px;
+        }
 
-    .box {
-      background: #ffffff;
-      padding: 55px 40px;
-      border-radius: 26px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-    }
+        nav a:hover {
+            color: var(--primary);
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 35px;
-      margin-top: 45px;
-    }
+        .nav-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
 
-    .screenshots img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
 
-    .price {
-      font-size: 2.2em;
-      color: #1a365d;
-      margin: 12px 0;
-    }
+        .btn-primary {
+            background: var(--primary);
+            color: var(--secondary);
+        }
 
-    a.button {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 15px 36px;
-      background: #1f1f1f;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 0.95em;
-    }
+        .btn-primary:hover {
+            background: #c49b28;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
 
-    .subtle-link {
-      font-size: 0.85em;
-      color: #607d8b;
-      margin-top: 10px;
-    }
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--white);
+        }
 
-    .subtle-link a {
-      color: #1a365d;
-      text-decoration: none;
-    }
+        .btn-secondary:hover {
+            background: #0f2633;
+            transform: translateY(-2px);
+        }
 
-    footer {
-      text-align: center;
-      font-size: 0.85em;
-      color: #607d8b;
-      padding: 60px 20px;
-    }
+        .btn-outline {
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+        }
 
-    @media (max-width: 600px) {
-      .container { padding: 40px 15px; }
-      section { margin-bottom: 60px; }
-      .box { padding: 30px 22px; border-radius: 18px; }
-      h1 { font-size: 1.8em; }
-      h2 { font-size: 1.5em; }
-      p { font-size: 0.95em; }
-      .price { font-size: 1.7em; }
-    }
-  </style>
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            margin-bottom: 120px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.15em;
+            color: var(--gray);
+            max-width: 850px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        /* SECTIONS */
+        section {
+            margin-bottom: 100px;
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.05em;
+            color: var(--gray);
+            max-width: 850px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        /* BOX */
+        .box {
+            background: var(--white);
+            padding: 55px 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .box:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 45px;
+        }
+
+        /* SERVICE CARD */
+        .service-card {
+            background: var(--white);
+            padding: 40px 32px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card h3 {
+            font-size: 1.3em;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            min-height: 50px;
+        }
+
+        .price {
+            font-size: 2.4em;
+            color: var(--primary);
+            margin: 20px 0;
+            font-weight: 700;
+        }
+
+        .price-small {
+            font-size: 1.8em;
+            color: var(--primary);
+        }
+
+        .subtle-link {
+            font-size: 0.85em;
+            color: var(--gray);
+            margin-top: 16px;
+        }
+
+        .subtle-link a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .subtle-link a:hover {
+            color: var(--primary);
+        }
+
+        .subtle-link a + a::before {
+            content: " · ";
+            color: var(--gray);
+        }
+
+        /* DEMO SECTION */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin: 45px 0;
+        }
+
+        .demo-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .demo-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), #e8b4b8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .demo-info {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .demo-info h4 {
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .demo-info p {
+            font-size: 0.9em;
+            color: var(--gray);
+            margin: 0;
+        }
+
+        /* ABOUT LINKS */
+        .about-links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .about-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .about-links a:hover {
+            color: var(--primary);
+        }
+
+        .about-links a::after {
+            content: " · ";
+            color: var(--gray);
+            margin-left: 16px;
+        }
+
+        .about-links a:last-child::after {
+            content: "";
+        }
+
+        /* SOCIAL NOTE */
+        .social-note {
+            background: linear-gradient(135deg, rgba(208, 175, 55, 0.1), rgba(32, 128, 145, 0.1));
+            padding: 32px 24px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            margin: 60px 0;
+        }
+
+        .social-note p {
+            font-size: 0.95em;
+            color: var(--text);
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .social-note strong {
+            color: var(--secondary);
+        }
+
+        .social-note a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .social-note a:hover {
+            color: var(--primary);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            font-size: 0.85em;
+            color: var(--gray);
+            padding: 60px 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--primary);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 15px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                gap: 16px;
+            }
+
+            .box {
+                padding: 32px 20px;
+            }
+
+            section {
+                margin-bottom: 60px;
+            }
+
+            .about-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .about-links a::after {
+                content: "";
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 12px;
+            }
+
+            .hero h1 {
+                font-size: 1.6em;
+            }
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .price {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">Ruksar <span>Ansari</span></div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#demos">Demos</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary">Book Now</a>
+            </div>
+        </nav>
+    </header>
 
-  <!-- HERO -->
-  <section>
-    <h1>Simple Websites for Small Businesses</h1>
-    <p>
-      I design clean, structured websites for cafés, salons, tutors,
-      and independent service businesses that need a clear online presence.
-    </p>
-  </section>
+    <div class="container">
 
-  <!-- ABOUT -->
-  <section class="box">
-    <h2>About My Work</h2>
-    <p>
-      I build lightweight websites for local and service-based businesses.
-      Typical projects include cafés, salons, tuition classes,
-      clinics, and solo professionals.
-    </p>
-    <p>
-      These websites focus on clarity: services or menu, images,
-      location, and direct contact. No backend systems and no monthly hosting.
-    </p>
+        <!-- HERO -->
+        <section class="hero">
+            <h1>Simple Websites for Small Businesses</h1>
+            <p>I design clean, structured websites for cafés, salons, tutors, and independent service businesses that need a clear online presence.</p>
+            <div class="hero-buttons">
+                <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary">Get Started</a>
+                <a href="#services" class="btn btn-outline">View Services</a>
+            </div>
+        </section>
 
-    <div style="margin-top:25px;">
-      <a href="https://www.linkedin.com/in/ruksar-ansari-02340b398" target="_blank"
-         style="margin-right:12px; color:#1a365d; text-decoration:none;">
-        LinkedIn
-      </a>
-      ·
-      <a href="mailto:ruksaransari182025@gmail.com"
-         style="margin-left:12px; color:#1a365d; text-decoration:none;">
-        Email
-      </a>
+        <!-- ABOUT -->
+        <section class="box">
+            <h2 class="section-title">About My Work</h2>
+            <p style="max-width: 850px; margin: 0 auto;">
+                I build lightweight websites for local and service-based businesses. Typical projects include cafés, salons, tuition classes, clinics, and solo professionals.
+            </p>
+            <p style="max-width: 850px; margin: 20px auto 0;">
+                These websites focus on clarity: services or menu, images, location, and direct contact. No backend systems and no monthly hosting.
+            </p>
+            <div class="about-links">
+                <a href="https://www.linkedin.com/in/ruksar-ansari-02340b398" target="_blank">LinkedIn</a>
+                <a href="mailto:ruksaransari182025@gmail.com">Email</a>
+            </div>
+        </section>
+
+        <!-- DEMOS -->
+        <section id="demos">
+            <h2 class="section-title">Live Demos</h2>
+            <p class="section-subtitle">See real examples of websites I've built</p>
+            <div class="demo-grid">
+                <div class="demo-card" onclick="window.open('https://ruksara7.github.io/cafe-restaurant-website/', '_blank')">
+                    <div class="demo-image">☕</div>
+                    <div class="demo-info">
+                        <h4>Café Website</h4>
+                        <p>Menu, gallery & ordering</p>
+                    </div>
+                </div>
+                <div class="demo-card" onclick="window.open('https://ruksara7.github.io/salon-website/', '_blank')">
+                    <div class="demo-image">💇‍♀️</div>
+                    <div class="demo-info">
+                        <h4>Salon Website</h4>
+                        <p>Services & booking</p>
+                    </div>
+                </div>
+                <div class="demo-card" onclick="window.open('https://ruksara7.github.io', '_blank')">
+                    <div class="demo-image">🌐</div>
+                    <div class="demo-info">
+                        <h4>Full Demo</h4>
+                        <p>Complete example site</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services">
+            <h2 class="section-title">Services & Pricing</h2>
+            <p class="section-subtitle">Choose the package that fits your needs</p>
+
+            <div class="grid">
+                <div class="service-card">
+                    <h3>Landing Page</h3>
+                    <div class="price">₹1,999</div>
+                    <p>One-page website explaining your service.</p>
+                    <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary">Book Now</a>
+                    <div class="subtle-link"><a href="help.html">Pre-booking clarification</a></div>
+                </div>
+
+                <div class="service-card">
+                    <h3>Extended Website</h3>
+                    <div class="price">₹2,999</div>
+                    <p>Additional pages and expanded content.</p>
+                    <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary">Book Now</a>
+                    <div class="subtle-link"><a href="help.html">Pre-booking clarification</a></div>
+                </div>
+
+                <div class="service-card">
+                    <h3>Custom Project</h3>
+                    <div class="price-small">From ₹6,000</div>
+                    <p>Custom structure, domain connection, or special requirements.</p>
+                    <div class="subtle-link">
+                        <a href="mailto:ruksaransari182025@gmail.com">Email</a>
+                        <a href="help.html">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL NOTE -->
+        <section class="social-note">
+            <p>
+                <strong>Note for social media visitors:</strong><br>
+                A limited ₹999 starter website option is available within the same booking link
+                (fixed scope). Standard packages at ₹1,999, ₹2,999, and ₹6,000+ remain unchanged.
+                <br><br>
+                Booking is available via
+                <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank">Gumroad</a>
+                or <a href="help.html">WhatsApp</a>.
+            </p>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="box">
+            <h2 class="section-title">Why Choose My Services</h2>
+            <p style="max-width: 850px; margin: 0 auto;">
+                ✓ Simple, clean design focused on clarity<br>
+                ✓ Fast loading & mobile responsive<br>
+                ✓ Direct contact & inquiry forms<br>
+                ✓ No ongoing hosting fees<br>
+                ✓ Quick turnaround (5-7 days)<br>
+                ✓ Unlimited revisions during development
+            </p>
+        </section>
+
     </div>
-  </section>
 
-  <!-- CAFE DEMO -->
-  <section class="box">
-    <h2>Café Website Demo</h2>
-    <p>
-      A complete café website example with menu, gallery,
-      location, and direct ordering contact.
-    </p>
-    <a class="button" href="https://ruksara7.github.io/cafe-restaurant-website/" target="_blank">
-      View Café Demo
-    </a>
-  </section>
-
-  <!-- PREVIOUS WORK -->
-  <section class="box">
-    <h2>Previous Work Preview</h2>
-    <p>
-      Screenshots from other websites I have built,
-      showing layout structure and content clarity.
-    </p>
-
-    <div class="grid screenshots">
-      <img src="sample1.png">
-      <img src="sample2.png">
-      <img src="sample3.png">
-    </div>
-
-    <!-- OLD FULL DEMO RESTORED -->
-    <a class="button" href="https://ruksara7.github.io" target="_blank">
-      View Full Demo Website
-    </a>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="box">
-    <h2>Services & Pricing</h2>
-
-    <div class="grid">
-
-      <div>
-        <strong>Landing Page</strong>
-        <div class="price">₹1,999</div>
-        <p>One-page website explaining your service.</p>
-        <a class="button" href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank">
-          Book via Gumroad
-        </a>
-        <div class="subtle-link"><a href="help.html">Pre-booking clarification</a></div>
-      </div>
-
-      <div>
-        <strong>Extended Website</strong>
-        <div class="price">₹2,999</div>
-        <p>Additional pages and expanded content.</p>
-        <a class="button" href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank">
-          Book via Gumroad
-        </a>
-        <div class="subtle-link"><a href="help.html">Pre-booking clarification</a></div>
-      </div>
-
-      <div>
-        <strong>Custom Project</strong>
-        <div class="price">From ₹6,000</div>
-        <p>Custom structure, domain connection, or special requirements.</p>
-        <div class="subtle-link">
-          <a href="mailto:ruksaransari182025@gmail.com">Email</a> ·
-          <a href="help.html">WhatsApp</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SOCIAL MEDIA NOTE -->
-  <section>
-    <p style="font-size:0.9em; color:#455a64; max-width:900px; margin:0 auto;">
-      <strong style="color:#1a365d;">Note for social media visitors:</strong><br>
-      A limited ₹999 starter website option is available within the same booking link
-      (fixed scope). Standard packages at ₹1,999, ₹2,999, and ₹6,000+ remain unchanged.
-      <br><br>
-      Booking is available via
-      <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" style="color:#1a365d;">
-        Gumroad
-      </a>
-      or
-      <a href="help.html" style="color:#1a365d;">
-        WhatsApp
-      </a>.
-    </p>
-  </section>
-
-</div>
-
-<footer>
-  © 2026 Ruksar Ansari · Website Services ·
-  <a href="help.html">Pre-booking clarification</a>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Ruksar Ansari · Website Services ·
+        <a href="help.html">Pre-booking clarification</a>
+    </footer>
 
 </body>
 </html>
