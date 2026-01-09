@@ -1,184 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ruksar Ansari - Website & Landing Pages Services</title>
-  <meta name="description" content="Simple, structured websites for cafés, salons, tutors, and small businesses. Clear pricing, real demos, optional pre-booking clarification.">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* ...existing styles remain unchanged... */
-    @media (max-width: 600px) {
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruksar Ansari - Website & Landing Page Services</title>
+  <meta name="description" content="Simple, structured websites for cafés, salons, tutors, and small businesses. Clear pricing, real demos, optional pre-booking clarification." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body id="top">
+<body class="bg-gray-50 text-gray-800 font-[Inter]">
+
   <!-- HEADER -->
-  <header>
-    <nav>
-      <div class="logo">Ruksar <span>Ansari</span></div>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#demos">Demos</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-      <div class="nav-buttons">
-        <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary">Book Now</a>
-      </div>
-    </nav>
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="text-xl font-bold text-teal-700">Ruksar <span class="text-yellow-500">Ansari</span></div>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#services" class="hover:text-yellow-500 transition">Services</a>
+        <a href="#demos" class="hover:text-yellow-500 transition">Demos</a>
+        <a href="#about" class="hover:text-yellow-500 transition">About</a>
+      </nav>
+      <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="inline-block bg-yellow-500 text-teal-900 px-5 py-2 rounded-md font-semibold text-sm hover:bg-yellow-400 transition">Book Now</a>
+    </div>
   </header>
 
-  <div class="container">
+  <main class="max-w-7xl mx-auto px-4">
+
     <!-- HERO -->
-    <section class="hero">
-      <h1>Custom Websites for Salons, Tutors & Local Businesses</h1>
-      <p>Fast, clean, mobile-ready pages with direct contact options. No coding, no monthly fees.</p>
-      <div class="hero-buttons">
-        <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary">Get Started</a>
-        <a href="#services" class="btn btn-outline">View Services</a>
-        <a href="tel:+91XXXXXXXXXX" class="btn btn-secondary">📞 Call Me</a>
+    <section class="text-center py-20">
+      <h1 class="text-4xl font-bold text-teal-700 mb-4">Simple Websites for Small Businesses</h1>
+      <p class="max-w-2xl mx-auto text-gray-600 text-lg">I design clean, structured websites for cafés, salons, tutors, and independent service businesses that need a clear online presence.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="bg-yellow-500 text-teal-900 px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition">Get Started</a>
+        <a href="#services" class="border-2 border-yellow-500 text-yellow-500 px-6 py-3 rounded-md font-semibold hover:bg-yellow-500 hover:text-teal-900 transition">View Services</a>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="box">
-      <h2 class="section-title">🙋 About My Work</h2>
-      <p style="max-width: 850px; margin: 0 auto;">
-        I build lightweight websites for local and service-based businesses. Typical projects include cafés, salons, tuition classes, clinics, and solo professionals.
-      </p>
-      <p style="max-width: 850px; margin: 20px auto 0;">
-        These websites focus on clarity: services or menu, images, location, and direct contact. No backend systems and no monthly hosting.
-      </p>
-      <div class="about-links">
-        <a href="https://www.linkedin.com/in/ruksar-ansari-02340b398" target="_blank">LinkedIn</a>
-        <a href="mailto:ruksaransari182025@gmail.com">Email</a>
+    <!-- ABOUT MY WORK -->
+    <section class="bg-white rounded-xl shadow p-10 mb-16">
+      <h2 class="text-2xl font-bold text-teal-700 text-center mb-6">About My Work</h2>
+      <p class="max-w-2xl mx-auto text-center text-gray-600 mb-4">I build lightweight websites for local and service-based businesses. Typical projects include cafés, salons, tuition classes, clinics, and solo professionals.</p>
+      <p class="max-w-2xl mx-auto text-center text-gray-600">These websites focus on clarity: services or menu, images, location, and direct contact. No backend systems and no monthly hosting.</p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm font-medium">
+        <a href="https://www.linkedin.com/in/ruksar-ansari-02340b398" target="_blank" class="text-teal-700 hover:text-yellow-500 transition">LinkedIn</a>
+        <a href="mailto:ruksaransari182025@gmail.com" class="text-teal-700 hover:text-yellow-500 transition">Email</a>
       </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="box">
-      <h2 class="section-title">⚙️ How It Works</h2>
-      <ul style="max-width:700px; margin:0 auto; text-align:left; line-height:1.8; font-size:0.95em;">
-        <li>Choose your package and book via Gumroad</li>
-        <li>I reach out within 24 hours for details</li>
-        <li>You get your draft in 3–5 days</li>
-        <li>Unlimited revisions until you're satisfied</li>
-      </ul>
     </section>
 
     <!-- DEMOS -->
-    <section id="demos">
-      <h2 class="section-title">🌐 Live Demos</h2>
-      <p class="section-subtitle">See real examples of websites I've built</p>
-      <div class="demo-grid">
-        <div class="demo-card" onclick="window.open('https://ruksara7.github.io/cafe-restaurant-website/', '_blank')">
-          <div class="demo-image">☕</div>
-          <div class="demo-info">
-            <h4>Café Website</h4>
-            <p>Menu, gallery & ordering</p>
+    <section id="demos" class="mb-20">
+      <h2 class="text-2xl font-bold text-teal-700 text-center mb-2">Live Demos</h2>
+      <p class="text-center text-gray-600 mb-10">See real examples of websites I've built</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div onclick="window.open('https://ruksara7.github.io/cafe-restaurant-website/', '_blank')" class="cursor-pointer bg-white rounded-xl shadow hover:shadow-lg transition">
+          <div class="h-40 flex items-center justify-center text-4xl bg-gradient-to-br from-yellow-400 to-pink-200">☕</div>
+          <div class="p-6 text-center">
+            <h4 class="text-teal-700 font-semibold mb-1">Café Website</h4>
+            <p class="text-sm text-gray-600">Menu, gallery & ordering</p>
           </div>
         </div>
-        <div class="demo-card" onclick="window.open('https://ruksara7.github.io/salon-website/', '_blank')">
-          <div class="demo-image">💇‍♀️</div>
-          <div class="demo-info">
-            <h4>Salon Website</h4>
-            <p>Services & booking</p>
+        <div onclick="window.open('https://ruksara7.github.io/salon-website/', '_blank')" class="cursor-pointer bg-white rounded-xl shadow hover:shadow-lg transition">
+          <div class="h-40 flex items-center justify-center text-4xl bg-gradient-to-br from-yellow-400 to-pink-200">💇‍♀️</div>
+          <div class="p-6 text-center">
+            <h4 class="text-teal-700 font-semibold mb-1">Salon Website</h4>
+            <p class="text-sm text-gray-600">Services & booking</p>
           </div>
         </div>
-        <div class="demo-card" onclick="window.open('https://ruksara7.github.io', '_blank')">
-          <div class="demo-image">🌐</div>
-          <div class="demo-info">
-            <h4>Full Demo</h4>
-            <p>Complete example site</p>
+        <div onclick="window.open('https://ruksara7.github.io', '_blank')" class="cursor-pointer bg-white rounded-xl shadow hover:shadow-lg transition">
+          <div class="h-40 flex items-center justify-center text-4xl bg-gradient-to-br from-yellow-400 to-pink-200">🌐</div>
+          <div class="p-6 text-center">
+            <h4 class="text-teal-700 font-semibold mb-1">Full Demo</h4>
+            <p class="text-sm text-gray-600">Complete example site</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services">
-      <h2 class="section-title">💼 Services & Pricing</h2>
-      <p class="section-subtitle">Choose the package that fits your needs</p>
-
-      <div class="grid">
-        <div class="service-card">
-          <h3>Landing Page</h3>
-          <div class="price">₹1,999</div>
-          <ul style="text-align:left; font-size:0.9em; line-height:1.6; padding-left:20px;">
-            <li>One-page layout with your branding</li>
-            <li>Mobile-friendly, fast-loading</li>
-            <li>Direct contact or booking button</li>
-          </ul>
-          <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary">Get My Website</a>
-          <div class="subtle-link"><a href="help.html">Pre-booking clarification</a></div>
+    <section id="services" class="mb-20">
+      <h2 class="text-2xl font-bold text-teal-700 text-center mb-2">Services & Pricing</h2>
+      <p class="text-center text-gray-600 mb-10">Choose the package that fits your needs</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h3 class="text-lg font-semibold text-teal-700 mb-2">Landing Page</h3>
+          <div class="text-3xl font-bold text-yellow-500 mb-4">₹1,999</div>
+          <p class="text-sm text-gray-600 mb-4">One-page website explaining your service.</p>
+          <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary inline-block mb-2">Book Now</a>
+          <p class="text-xs text-gray-500"><a href="help.html" class="text-teal-700 hover:text-yellow-500">Pre-booking clarification</a></p>
         </div>
-
-        <div class="service-card">
-          <h3>Extended Website</h3>
-          <div class="price">₹2,999</div>
-          <ul style="text-align:left; font-size:0.9em; line-height:1.6; padding-left:20px;">
-            <li>Up to 5 pages with rich content</li>
-            <li>About, Gallery, Contact, Services</li>
-            <li>Same-day changes allowed</li>
-          </ul>
-          <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary">Get My Website</a>
-          <div class="subtle-link"><a href="help.html">Pre-booking clarification</a></div>
+        <div class="bg-white rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h3 class="text-lg font-semibold text-teal-700 mb-2">Extended Website</h3>
+          <div class="text-3xl font-bold text-yellow-500 mb-4">₹2,999</div>
+          <p class="text-sm text-gray-600 mb-4">Additional pages and expanded content.</p>
+          <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="btn btn-primary inline-block mb-2">Book Now</a>
+          <p class="text-xs text-gray-500"><a href="help.html" class="text-teal-700 hover:text-yellow-500">Pre-booking clarification</a></p>
         </div>
-
-        <div class="service-card">
-          <h3>Custom Project</h3>
-          <div class="price-small">From ₹6,000</div>
-          <ul style="text-align:left; font-size:0.9em; line-height:1.6; padding-left:20px;">
-            <li>Custom structure & layout</li>
-            <li>Domain integration</li>
-            <li>Special design features</li>
-          </ul>
-          <div class="subtle-link">
-            <a href="mailto:ruksaransari182025@gmail.com">Email</a>
-            <a href="help.html">WhatsApp</a>
-          </div>
+        <div class="bg-white rounded-xl shadow p-6 text-center hover:shadow-lg transition">
+          <h3 class="text-lg font-semibold text-teal-700 mb-2">Custom Project</h3>
+          <div class="text-2xl font-bold text-yellow-500 mb-4">From ₹6,000</div>
+          <p class="text-sm text-gray-600 mb-4">Custom structure, domain connection, or special requirements.</p>
+          <p class="text-xs text-gray-500">
+            <a href="mailto:ruksaransari182025@gmail.com" class="text-teal-700 hover:text-yellow-500">Email</a> · 
+            <a href="help.html" class="text-teal-700 hover:text-yellow-500">WhatsApp</a>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIAL -->
-    <blockquote style="font-style:italic; color:#455a64; text-align:center; max-width:700px; margin:50px auto 0;">
-      “My new website is fantastic – it looks amazing and I started getting bookings the same week.”
-      <br><span style="display:block; margin-top:8px;">– James, Salon Owner</span>
-    </blockquote>
-
     <!-- SOCIAL NOTE -->
-    <section class="social-note">
-      <p>
-        <strong>Note for social media visitors:</strong><br>
-        A limited ₹999 starter website option is available within the same booking link (fixed scope). Standard packages at ₹1,999, ₹2,999, and ₹6,000+ remain unchanged.
-        <br><br>
-        Booking is available via <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank">Gumroad</a> or <a href="help.html">WhatsApp</a>.
+    <section class="bg-gradient-to-br from-yellow-100 to-cyan-100 border-l-4 border-yellow-500 rounded-xl p-6 mb-20">
+      <p class="text-sm text-gray-700 leading-relaxed">
+        <strong class="text-teal-700">Note for social media visitors:</strong><br>
+        A limited ₹999 starter website option is available within the same booking link (fixed scope). Standard packages at ₹1,999, ₹2,999, and ₹6,000+ remain unchanged.<br><br>
+        Booking is available via <a href="https://ruksar11.gumroad.com/l/kvvhxd" target="_blank" class="text-teal-700 font-medium hover:text-yellow-500">Gumroad</a> or 
+        <a href="help.html" class="text-teal-700 font-medium hover:text-yellow-500">WhatsApp</a>.
       </p>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="box">
-      <h2 class="section-title">🔎 Why Choose My Services</h2>
-      <p style="max-width: 850px; margin: 0 auto;">
-        ✓ Simple, clean design focused on clarity<br>
-        ✓ Fast loading & mobile responsive<br>
-        ✓ Direct contact & inquiry forms<br>
-        ✓ No ongoing hosting fees<br>
-        ✓ Quick turnaround (5-7 days)<br>
-        ✓ Unlimited revisions during development
-      </p>
+    <!-- WHY CHOOSE ME -->
+    <section id="about" class="bg-white rounded-xl shadow p-10">
+      <h2 class="text-2xl font-bold text-teal-700 text-center mb-6">Why Choose My Services</h2>
+      <ul class="max-w-xl mx-auto text-sm text-gray-600 space-y-2 list-disc list-inside">
+        <li>Simple, clean design focused on clarity</li>
+        <li>Fast loading & mobile responsive</li>
+        <li>Direct contact & inquiry forms</li>
+        <li>No ongoing hosting fees</li>
+        <li>Quick turnaround (5-7 days)</li>
+        <li>Unlimited revisions during development</li>
+      </ul>
     </section>
-  </div>
+  </main>
 
   <!-- FOOTER -->
-  <footer>
-    © 2026 Ruksar Ansari · Website Services · <a href="help.html">Pre-booking clarification</a><br><br>
-    <a href="#top">↑ Back to top</a>
+  <footer class="text-center text-sm text-gray-500 py-10">
+    © 2026 Ruksar Ansari · Website Services · <a href="help.html" class="text-teal-700 hover:text-yellow-500">Pre-booking clarification</a>
   </footer>
 </body>
 </html>
